@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import Jembut from './Jembut'
+import { reducer as reduxFormReducer } from 'redux-form';
 const initState = {
    anjing: 1,
    nama: 'goblok'
@@ -15,6 +16,8 @@ function tot(state = initState, action) {
  }
 const todoApp = combineReducers({
   tot,
-  Jembut
+  Jembut,
+  //NAMANYA HARUS FORM INI ATURAN DARI REDUX FORM
+  form: reduxFormReducer, // mounted under "form"
 })
 export default todoApp;
